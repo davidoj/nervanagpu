@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import absolute_import
+
 import os.path
 import re
 import traceback as tb
@@ -20,7 +22,7 @@ from pycuda.compiler import SourceModule
 from pycuda.tools import context_dependent_memoize
 from pytools import memoize, memoize_method
 import pycuda.driver as drv
-import nervanagpu as ng
+from nervanagpu import nervanagpu as ng
 # from ipdb import set_trace
 
 _ew_template = r"""
